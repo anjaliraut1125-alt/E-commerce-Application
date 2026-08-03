@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt");
 const User = require("../models/User");
+const { json } = require("express");
 
 // Register User
 
@@ -67,7 +68,7 @@ const register = async ( req , res) => {
             });
         }
 
-        const phoneRegex = /^[6-9]\d{9}$/;
+        const phoneRegex = /^[6-9]\d{9}$/;  
 
         if(!phoneRegex.test(phone)){
             return res.status(400).json({
@@ -139,6 +140,109 @@ const register = async ( req , res) => {
     }
 };
 
+
+
+
+// Login user
+
+const login = async (req , res)=> {
+    try{
+        const { email , password } = req.body;
+
+        //validation
+
+        if (!email) {
+            return res.status(400).json({
+                success : false,
+                message: "Email is required.",
+            });
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!emailRegex.test(email)) {
+            return res.status(400).json({
+                success: false,
+                message: "Please enter a valid email address.",
+            });
+        }
+
+        if(!password) {
+            return res.status(400).json({
+                success: false,
+                message: "Password is required.",
+            });
+        }
+
+        // Find User
+        
+        const user = await User.findOne({ email });
+
+        if(!user) {
+            return res.status(401).json({
+                success: false,
+                message: "Invalid email or password.",
+            });
+        }
+
+        // Compare Password
+
+        const isMatch  = await bcrypt.compare(password , user.password);
+
+        if(!isMatch) {
+            return res.status(401).json({
+                suceess: false,
+                message: "Invalid email or password."
+            })
+        }
+
+        res.status(200).json({
+            success: true,
+            message: "Login Successfully.",
+            data:{
+                id: user.id,
+                username: user.username,
+                email: user.email,
+                phone: user.phone,
+                address: user.address
+            },
+        });
+
+        
+    } catch (error){
+        res.status(500).json({
+            success: false,
+            message: error.message,
+        });
+    }
+
+
+};
+
+
+
+// Logout USer
+
+const logout = async (req , res) => {
+    try{
+        
+        res.status(200).json({
+            success: true,
+            message: "Logout successully.",
+        });
+    
+    }catch(error) {
+        res.status(500).json({
+            success: false,
+            message: error.message,
+        });
+    }
+    
+
+};
+
+
 module.exports = {
-    register
+    register,
+    login,
+    logout,
 };
