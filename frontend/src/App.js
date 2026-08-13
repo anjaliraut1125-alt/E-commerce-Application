@@ -1,11 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from "./components/Layout/Layout";
+import Home from "./components/Pages/Home";
 
 function App() {
   return (
-   <>
-   <h1 className='text-danger'>Welcome to the E-Commerce!</h1>
-   </>
+   <Layout>
+      <Home/>
+   </Layout>
   );
 }
 
