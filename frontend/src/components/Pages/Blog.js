@@ -1,12 +1,12 @@
-function About(){
+function Blog(){
     return(
         <div className="text-center py-5">
             <h1 className="display-4 fw-bold">
-                Welcome To The  About Page
+                Welcome To The Blog Page
             </h1>
 
             <p className="lead">
-                This is the  About page
+                This is the  Blog page
             </p>
 
             <button className="btn btn-primary mt-3">
@@ -16,4 +16,4 @@ function About(){
     );
 }
 
-export default  About;
+export default  Blog;
