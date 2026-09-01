@@ -194,7 +194,9 @@ function About() {
     {/*  End Component Area  */}
 
 
-      {/*  Start Component Area */}
+
+
+    {/*  Start Component Area */}
     <div class="rbt-component-area rbt-counterup-area rbt-section-gap2Top rbt-section-gap2Bottom rbt-bg-color-gray-100">
         <div class="container">
             <div class="row">
@@ -267,6 +269,44 @@ function About() {
         </div>
     </div>
     {/* End Component Area */}
+  
+
+
+      {/* <!-- Start Component Area  */}
+    <div class="rbt-component-area rbt-about-area rbt-section-gap2Top rbt-section-gap2Bottom">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="rbt-about-feature-area">
+                        <div class="inner">
+                            <div class="section-title text-start">
+                                <span class="rbt-card-subtitle">About Us</span>
+                                <h3 class="rbt-title mb--16">We are the world's biggest
+                                    electronics online store where innovation meets the real printing.</h3>
+                                <p class="b1 rbt-text-color-gray-600 mb--24">Let the beauty of what you love be what you
+                                    do. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry’s standard dummy text ever since the, remaining
+                                    essentially.</p>
+                                <div class="read-more-btn">
+                                    <a class="rbt-btn" href="https://www.youtube.com/watch?v=abFXQQzFVDc" data-fancybox="">Play Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <div class="video-popup-wrapper rbt-curved-style-box">
+                        <img class="w-100 rbt-radius" src="assets/images/about/about-image-5.webp" alt="Video Images"/>
+                        <a class="rbt-btn rounded-player popup-video position-to-top rbtplayer" href="https://www.youtube.com/watch?v=abFXQQzFVDc" data-fancybox="">
+                            <span><i class="fa-solid fa-play"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/*End Component Area */}
+    
     </div>
   );
 }
