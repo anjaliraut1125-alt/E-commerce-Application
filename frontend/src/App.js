@@ -6,6 +6,8 @@ import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
 import Blog from "./components/Pages/Blog";
 import PageNotFound from "./components/Pages/PageNotFound";
+import Login from "./components/Pages/Login";
+
 
 
 function App() {
@@ -18,6 +20,9 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/blog" element={<Blog/>}/>
         <Route path="*" element={<PageNotFound/>}/>
+        <Route path="/login" element={<Login/>}/>
+        {/* <Route path="/register" element={<Register/>}/> */}
+
       </Routes>
    </Layout>
    </>
