@@ -239,21 +239,38 @@ function Header(){
           <nav className="rbt-mainmenu-nav">
             <ul className="mainmenu has-nav-bg-shape-hover">
               <li className="with-rbt-megamenu has-menu-child-item position-static rbt-initial-odo-count">
-                <a href="#!">Home </a>
+                <a href="/">Home </a>
               
               </li>
               <li className="with-rbt-megamenu has-menu-child-item position-static rbt-initial-odo-count">
-                <a href="#!">About</a>
+                <a href="/about">About</a>
               
               </li>
               <li className="with-rbt-megamenu has-menu-child-item position-static rbt-initial-odo-count">
-                <a href="#!">Blog</a>
+                <a href="/blog">Blog</a>
               
               </li>
               <li className="with-rbt-megamenu has-menu-child-item position-static rbt-initial-odo-count">
-                <a href="#!">Contact</a>
+                <a href="/contact">Contact</a>
               
               </li>
+
+               <li className="with-rbt-megamenu has-menu-child-item position-static rbt-initial-odo-count">
+                <a href="/login">Login</a>
+              
+              </li>
+
+               <li className="with-rbt-megamenu has-menu-child-item position-static rbt-initial-odo-count">
+                <a href="/register">Register</a>
+              
+              </li>
+
+               <li className="with-rbt-megamenu has-menu-child-item position-static rbt-initial-odo-count">
+                <a href="/product">Product</a>
+              
+              </li>
+
+
             
             </ul>
           </nav>

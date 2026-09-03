@@ -7,6 +7,8 @@ import Contact from "./components/Pages/Contact";
 import Blog from "./components/Pages/Blog";
 import PageNotFound from "./components/Pages/PageNotFound";
 import Login from "./components/Pages/Login";
+import Register from "./components/Pages/Register";
+import Product from "./components/Pages/Product";
 
 
 
@@ -21,8 +23,11 @@ function App() {
         <Route path="/blog" element={<Blog/>}/>
         <Route path="*" element={<PageNotFound/>}/>
         <Route path="/login" element={<Login/>}/>
-        {/* <Route path="/register" element={<Register/>}/> */}
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/product" element={<Product/>}/>
 
+
+      
       </Routes>
    </Layout>
    </>
