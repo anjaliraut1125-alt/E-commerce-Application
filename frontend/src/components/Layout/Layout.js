@@ -1,18 +1,22 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import { ToastContainer} from "react-toastify";
+  
+
 
 
 function Layout({ children }) {
-    return(
-        <div className="d-flex flex-column min-vh-100">
-            <Header/>
+    return (
+      <div className="d-flex flex-column min-vh-100">
+        <Header />
 
-            <main className="container py-4 flex-grow-1">
-                {children}
-            </main>
+        <main className="container py-4 flex-grow-1">
+          <ToastContainer />
+          {children}
+        </main>
 
-            <Footer/>
-        </div>
+        <Footer />
+      </div>
     );
     
 }
