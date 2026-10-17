@@ -1,51 +1,53 @@
 import React from "react";
-import "./Dashboard.css";
-
+import './Dashboard.css';
+import { ToastContainer, toast } from 'react-toastify';
 import Sidebar from "./Sidebar";
 
-import { ToastContainer } from "react-toastify";
 
 function Layout({ children }) {
-  return (
-    <>
-      <Sidebar />
-      <main className="main-content">
-        <ToastContainer />
+    return (
+        <div className="admin-wrapper">
+          <Sidebar />
+            <main className="main-content">
+                <ToastContainer />
+                <header className="top-header">
+                    <div className="header-left">
+                        <button className="menu-btn">
+                            ☰
+                        </button>
+                        <div>
+                            <h1>Dashboard</h1>
+                            <p>Welcome back, Admin!</p>
+                        </div>
+                    </div>
+                    <div className="header-right">
+                        {/* Search */}
+                        <div className="search-box">
+                            <span>⌕</span>
+                            <input type="text" placeholder="Search..." />
+                        </div>
+                        {/* Notification */}
+                        <button className="notification">
+                            🔔
+                            <span className="notification-dot" />
+                        </button>
+                        {/* Admin Profile */}
+                        <div className="admin-profile">
+                            <div className="profile-image">
+                                A
+                            </div>
+                            <div className="profile-info">
+                                <strong>Admin</strong>
+                                <small>Administrator</small>
+                            </div>
+                            <span className="profile-arrow">⌄</span>
+                        </div>
+                    </div>
+                </header>
+                {children}
+            </main>
 
-        <header className="header">
-          <div className="header-left">
-            <button className="menu-btn">
-              <i className="fa-solid fa-bars" />
-            </button>
-            <div>
-              <h1>Dashboard</h1>
-              <p>Welcome back, Anjali! Here's what's happening today.</p>
-            </div>
-          </div>
-          <div className="header-right">
-            <div className="search-box">
-              <i className="fa-solid fa-magnifying-glass" />
-              <input type="text" placeholder="Search anything..." />
-            </div>
-            <button className="header-icon">
-              <i className="fa-regular fa-bell" />
-              <span className="notification-dot" />
-            </button>
-            <div className="profile">
-              <div className="profile-avatar">AS</div>
-              <div className="profile-info">
-                <strong>Anjali Singh</strong>
-                <span>Admin</span>
-              </div>
-              <i className="fa-solid fa-chevron-down" />
-            </div>
-          </div>
-        </header>
-
-        {children}
-      </main>
-    </>
-  );
+        </div>
+    );
 }
-
 export default Layout;

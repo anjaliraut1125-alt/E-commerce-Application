@@ -1,53 +1,33 @@
 import { Link } from "react-router-dom";
-
 function Sidebar() {
-  return (
-    <>
-      <aside className="sidebar">
-        <div className="logo">
-          <div className="logo-icon">
-            <i className="fa-solid fa-cart-shopping" />
-          </div>
-          <span>ShopAdmin</span>
-        </div>
-        <div className="menu-title">MAIN MENU</div>
-        <ul className="sidebar-menu">
-          <li className="active">
-            <Link to="/dashboard">
-              <i className="fa-solid fa-chart-pie" />
-              <span>Dashboard</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/products">
-              <i className="fa-solid fa-box" />
-              <span>Products</span>
-              {/* <span className="badge">24</span> */}
-            </Link>
-          </li>
-          <li>
-            <Link to="/addProduct">
-              <i className="fa-solid fa-cart-shopping" />
-              <span>AddProduct</span>
-              {/* <span className="badge">12</span> */}
-            </Link>
-          </li>
-          
-        </ul>
-        {/* Admin Profile */}
-        <div className="sidebar-bottom">
-          <div className="admin-profile">
-            <div className="admin-avatar">AS</div>
-            <div>
-              <h4>Anjali Singh</h4>
-              <p>Administrator</p>
+    return (
+        <>
+         <aside className="sidebar">
+            {/* Logo */}
+            <div className="logo">
+                <div className="logo-icon">E</div>
+                <span>ShopAdmin</span>
             </div>
-            <i className="fa-solid fa-ellipsis-vertical" />
-          </div>
-        </div>
-      </aside>
-    </>
-  );
+            {/* Navigation */}
+            <nav className="sidebar-nav">
+                <p className="menu-title">MAIN MENU</p>
+                <Link to="/dashboard" className="nav-link active">
+                    <span className="nav-icon">▦</span>
+                    <span>Dashboard</span>
+                </Link>
+                <Link to="/products" className="nav-link">
+                    <span className="nav-icon">▤</span>
+                    <span>Products</span>
+                </Link>
+                <Link to="/addproduct" className="nav-link">
+                    <span className="nav-icon">▤</span>
+                    <span>Add Product</span>
+                </Link>
+                
+            </nav>
+           
+        </aside>
+        </>
+    );
 }
-
 export default Sidebar;
